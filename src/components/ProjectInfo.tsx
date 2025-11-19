@@ -1,4 +1,3 @@
-// File: src/components/ProjectInfo.tsx
 import React from "react";
 
 export interface ProjectInfoProps {

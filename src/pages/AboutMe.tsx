@@ -23,7 +23,6 @@ export default function AboutMe() {
       <PurpleBackground />
 
       <div className="max-w-7xl mx-auto w-full h-full flex gap-6 px-8 relative z-10">
-        {/* LADO ESQUERDO */}
         <div className="w-[30%] flex flex-col">
           <div className="bg-neutral-800/70 backdrop-blur-md border border-neutral-700 rounded-2xl p-6 shadow-xl h-full">
             <button
