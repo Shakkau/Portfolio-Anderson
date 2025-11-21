@@ -1,11 +1,8 @@
-// src/views/AboutView.tsx
-import React from "react";
-
 export default function AboutView() {
   return (
     <div>
       <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-        📖 Sobre Mim
+        Sobre Mim
       </h2>
 
       <div className="space-y-4 text-neutral-300">

@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectInfo from "../components/ProjectInfo";
 
 interface Project {
@@ -39,7 +38,7 @@ export default function ProjectsView({
   return (
     <div>
       <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-        💼 Meus Projetos
+        Meus Projetos
       </h2>
 
       <div className="space-y-6">
