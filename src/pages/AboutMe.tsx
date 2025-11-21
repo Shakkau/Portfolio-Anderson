@@ -22,9 +22,12 @@ export default function AboutMe() {
     <div className="w-full min-h-screen bg-neutral-900 relative overflow-hidden py-12">
       <PurpleBackground />
 
-      <div className="max-w-7xl mx-auto w-full flex gap-6 px-8 relative z-10">
-        <div className="w-[30%]">
-          <div className="bg-neutral-800/70 backdrop-blur-md border border-neutral-700 rounded-2xl p-6 shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
+      {/* WRAPPER PRINCIPAL — AGORA RESPONSIVO */}
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-6 px-4 md:px-8 relative z-10">
+        {/* CARD ESQUERDO */}
+        <div className="w-full md:w-[30%]">
+          <div className="bg-neutral-800/70 backdrop-blur-md border border-neutral-700 rounded-2xl p-6 shadow-xl h-auto md:h-[calc(100vh-6rem)] overflow-y-auto">
+            {/* VOLTAR */}
             <button
               onClick={() => navigate("/")}
               className="p-2 rounded-lg bg-neutral-700/50 hover:bg-neutral-700 text-white transition-all duration-200 hover:scale-110 mb-2"
@@ -46,10 +49,11 @@ export default function AboutMe() {
               </svg>
             </button>
 
+            {/* FOTO */}
             <div className="flex justify-center mb-2">
-              <div className="w-40 h-40 bg-neutral-700 rounded-full flex items-center justify-center overflow-hidden">
+              <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-700 rounded-full flex items-center justify-center overflow-hidden">
                 <svg
-                  className="w-24 h-24 text-neutral-400"
+                  className="w-20 h-20 md:w-24 md:h-24 text-neutral-400"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -58,14 +62,15 @@ export default function AboutMe() {
               </div>
             </div>
 
+            {/* NOME */}
             <h1 className="text-2xl font-bold text-white mb-2 text-center">
               Anderson José da Luz Júnior
             </h1>
-
             <p className="text-neutral-400 mb-6 text-center">
               Desenvolvedor Júnior pela VisionCar
             </p>
 
+            {/* INFOS */}
             <div className="space-y-3 text-sm mb-6 pb-6 relative">
               <div className="flex items-center gap-2 text-neutral-300">
                 <svg
@@ -204,6 +209,7 @@ export default function AboutMe() {
               </div>
             </div>
 
+            {/* TABS */}
             <div className="space-y-2">
               <button
                 onClick={() => setActiveTab("projetos")}
@@ -241,8 +247,9 @@ export default function AboutMe() {
           </div>
         </div>
 
-        <div className="flex-1">
-          <div className="bg-neutral-800/70 backdrop-blur-md border border-neutral-700 rounded-2xl p-8 shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
+        {/* CARD DIREITO */}
+        <div className="flex-1 w-full md:w-auto">
+          <div className="bg-neutral-800/70 backdrop-blur-md border border-neutral-700 rounded-2xl p-6 md:p-8 shadow-xl h-auto md:h-[calc(100vh-6rem)] overflow-y-auto">
             {activeTab === "projetos" && <ProjectsView />}
             {activeTab === "sobre" && <AboutView />}
             {activeTab === "curriculo" && <ResumeView />}
