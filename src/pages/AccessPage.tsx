@@ -41,7 +41,6 @@ export default function AccessPage() {
         className="w-full max-w-[800px] h-auto min-h-[60%] bg-neutral-800/70 backdrop-blur-md
           border border-neutral-700 rounded-2xl shadow-2xl flex flex-col relative p-6 md:p-10 z-10"
       >
-        {/* Mensagens animadas */}
         <div className="flex flex-col items-center relative h-14 md:h-16">
           <h1
             className={`absolute text-2xl md:text-4xl font-bold text-white transition-all duration-600 ${
@@ -53,7 +52,6 @@ export default function AccessPage() {
             {displayMessage}
           </h1>
 
-          {/* Indicadores */}
           <div className="flex gap-2 absolute bottom-[-20px]">
             {messages.map((_, idx) => (
               <div
@@ -66,7 +64,6 @@ export default function AccessPage() {
           </div>
         </div>
 
-        {/* Texto */}
         <div className="flex-1 flex items-center justify-center px-2 md:px-7 mt-6">
           <p className="text-neutral-300 text-base md:text-lg text-center leading-relaxed">
             Meu portfólio online, que criei com o intuito de mostrar um pouco
@@ -77,7 +74,6 @@ export default function AccessPage() {
           </p>
         </div>
 
-        {/* Botão */}
         <div className="mt-6 mb-4 flex justify-center">
           <button
             onClick={handleClickNavigateHomePage}

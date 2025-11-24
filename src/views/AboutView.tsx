@@ -40,7 +40,6 @@ export default function AboutView() {
       </h2>
 
       <div className="space-y-6">
-        {/* Frontend */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Frontend</h3>
           <div className="flex flex-wrap gap-2">
@@ -61,7 +60,6 @@ export default function AboutView() {
           </div>
         </div>
 
-        {/* Backend */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Backend</h3>
           <div className="flex flex-wrap gap-2">
@@ -84,7 +82,6 @@ export default function AboutView() {
           </div>
         </div>
 
-        {/* Ferramentas */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Ferramentas</h3>
           <div className="flex flex-wrap gap-2">

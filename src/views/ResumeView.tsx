@@ -229,7 +229,6 @@ export default function ResumeView() {
         </button>
       </div>
 
-      {/* DADOS PESSOAIS */}
       <div className="text-neutral-300 space-y-2 mb-10">
         <h3 className="text-2xl font-bold text-white mb-2">
           👤 Informações Pessoais
@@ -296,7 +295,6 @@ export default function ResumeView() {
           </div>
         </div>
 
-        {/* PROJETOS */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
             🚀 Projetos Desenvolvidos
@@ -338,7 +336,6 @@ export default function ResumeView() {
           </div>
         </div>
 
-        {/* Conhecimentos */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
             🛠️ Conhecimentos
@@ -369,7 +366,6 @@ export default function ResumeView() {
           </div>
         </div>
 
-        {/* Formação */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
             🎓 Formação Acadêmica
@@ -385,7 +381,6 @@ export default function ResumeView() {
           </div>
         </div>
 
-        {/* Idiomas */}
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">🌐 Idiomas</h3>
           <div className="space-y-2">

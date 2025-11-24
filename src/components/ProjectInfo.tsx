@@ -15,12 +15,13 @@ export default function ProjectInfo({
   demoLink,
   githubLink,
 }: ProjectInfoProps) {
-  
   return (
     <div className="bg-neutral-700/30 border border-neutral-600 rounded-xl p-6">
       <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
 
-      <p className="text-neutral-400 text-sm mb-3">Tecnologias: {techs.join(", ")}</p>
+      <p className="text-neutral-400 text-sm mb-3">
+        Tecnologias: {techs.join(", ")}
+      </p>
 
       <p className="text-neutral-300">{description}</p>
 
