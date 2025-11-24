@@ -7,20 +7,29 @@ export default function AboutView() {
 
       <div className="space-y-4 text-neutral-300">
         <p>
-          Olá! Sou um desenvolvedor apaixonado por tecnologia e inovação. Minha
-          jornada na programação começou há alguns anos, e desde então venho me
-          dedicando a aprender e criar soluções que fazem a diferença.
+          Olá a você que está lendo este texto hoje! Sou desenvolvedor
+          profissionalmente há pouco mais de 1 ano e meio, mas estou na
+          programação desde 2022. Minha jornada começou comigo
+          explorando o inspecionar elemento das páginas, alterando HTML,
+          mexendo no console e tentando entender como tudo funcionava — mesmo
+          sem imaginar que um dia eu realmente dominaria aquilo.
         </p>
 
         <p>
-          Tenho experiência com desenvolvimento web, trabalhando com tecnologias
-          modernas como React, TypeScript, Node.js e muito mais. Adoro enfrentar
-          desafios e transformar ideias em realidade através do código.
+          Aos 18 anos, um amigo me apresentou a ideia de fazer um curso técnico
+          de desenvolvimento no SENAI. Eu estava indeciso sobre qual caminho
+          seguir, então decidi dar uma chance. Foi a melhor escolha que poderia
+          ter feito: me identifiquei de imediato, me destaquei como um dos
+          melhores da turma e percebi que programação era realmente para mim.
         </p>
 
         <p>
-          Quando não estou programando, gosto de aprender novas tecnologias,
-          contribuir com a comunidade e compartilhar conhecimento.
+          Entrei no mercado como suporte técnico em um aplicativo de vendas,
+          onde aprendi muito sobre banco de dados, atendimento e trabalho em
+          equipe. Depois de 8 meses, surgiu uma oportunidade na área que eu
+          sempre quis: Desenvolvimento. Hoje atuo criando aplicações, sistemas e
+          sites, sempre buscando novas tecnologias, aprendendo protocolos e
+          entendendo cada vez mais os princípios que sustentam a tecnologia.
         </p>
       </div>
 
@@ -31,42 +40,64 @@ export default function AboutView() {
       </h2>
 
       <div className="space-y-6">
+        {/* Frontend */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Frontend</h3>
           <div className="flex flex-wrap gap-2">
-            {["React", "TypeScript", "Tailwind CSS", "Next.js", "HTML/CSS"].map(
-              (skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-neutral-700/50 border border-neutral-600 rounded-lg text-sm text-neutral-200"
-                >
-                  {skill}
-                </span>
-              )
-            )}
+            {[
+              "React-Native",
+              "React",
+              "Tailwind",
+              "TypeScript",
+              "HTML/CSS",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-4 py-2 bg-neutral-700/50 border border-neutral-600 rounded-lg text-sm text-neutral-200"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
 
+        {/* Backend */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Backend</h3>
           <div className="flex flex-wrap gap-2">
-            {["Node.js", "Express", "PostgreSQL", "MongoDB", "REST API"].map(
-              (skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-neutral-700/50 border border-neutral-600 rounded-lg text-sm text-neutral-200"
-                >
-                  {skill}
-                </span>
-              )
-            )}
+            {[
+              "Java",
+              "Spring Boot",
+              "Spring Security",
+              "API REST",
+              "MySQL",
+              "PostgreSQL",
+              "Java Swing",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-4 py-2 bg-neutral-700/50 border border-neutral-600 rounded-lg text-sm text-neutral-200"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
 
+        {/* Ferramentas */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Ferramentas</h3>
           <div className="flex flex-wrap gap-2">
-            {["Git", "GitHub", "VS Code", "Docker", "Figma"].map((skill) => (
+            {[
+              "Git",
+              "GitHub",
+              "GitHub Desktop",
+              "VS Code",
+              "IntelliJ",
+              "NetBeans",
+              "Postman",
+              "Hércules",
+            ].map((skill) => (
               <span
                 key={skill}
                 className="px-4 py-2 bg-neutral-700/50 border border-neutral-600 rounded-lg text-sm text-neutral-200"
