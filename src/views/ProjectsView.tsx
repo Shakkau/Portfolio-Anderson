@@ -6,25 +6,37 @@ interface Project {
   techs: string[];
   description: string;
   demoLink?: string;
+  demoImages?: string[]; // ajustado (antes estava string)
   githubLink?: string;
+  isEnterprise?: boolean;
 }
 
 const projectsExample: Project[] = [
+  {
+    id: "smart-ipdx-app",
+    title: "Smart IPDX – Aplicativo Mobile",
+    techs: ["React Native", "Tailwind", "AsyncStorage", "TypeScript"],
+    description:
+      "Aplicativo mobile Smart IPDX para comunicação direta com a api. Permite enviar comandos, gerenciar alarmes e visualizar eventos.",
+    isEnterprise: true,
+    demoImages: [],
+  },
+  {
+    id: "smart-ipdx-backend",
+    title: "Smart IPDX – Sistema Backend",
+    techs: ["Java", "Spring Boot", "MySQL", "Spring Security"],
+    description:
+      "Backend responsável por gerenciar comunicação do aplicativo Smart IPDX com os aparelhos da VisionCar, incluindo autenticação, confirmação de envios e segurança nas requisições.",
+    isEnterprise: true,
+    demoImages: [],
+  },
+
   {
     id: "proj-1",
     title: "Projeto 1",
     techs: ["React", "TypeScript", "Tailwind CSS"],
     description:
       "Uma aplicação front-end para demonstrar layout, componentes reutilizáveis e integração com APIs.",
-    demoLink: "#",
-    githubLink: "#",
-  },
-  {
-    id: "proj-2",
-    title: "Projeto 2",
-    techs: ["Node.js", "Express", "PostgreSQL"],
-    description:
-      "API REST completa com autenticação, rotas e integração com banco de dados.",
     demoLink: "#",
     githubLink: "#",
   },
@@ -49,7 +61,8 @@ export default function ProjectsView({
             techs={p.techs}
             description={p.description}
             demoLink={p.demoLink}
-            githubLink={p.githubLink}
+            githubLink={!p.isEnterprise ? p.githubLink : undefined}
+            isEnterprise={p.isEnterprise}
           />
         ))}
       </div>

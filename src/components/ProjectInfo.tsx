@@ -6,6 +6,8 @@ export interface ProjectInfoProps {
   description: string;
   demoLink?: string;
   githubLink?: string;
+  demoImages?: string[];
+  isEnterprise?: boolean;
 }
 
 export default function ProjectInfo({
@@ -14,7 +16,10 @@ export default function ProjectInfo({
   description,
   demoLink,
   githubLink,
+  demoImages,
+  isEnterprise = false,
 }: ProjectInfoProps) {
+  
   return (
     <div className="bg-neutral-700/30 border border-neutral-600 rounded-xl p-6">
       <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
@@ -25,8 +30,25 @@ export default function ProjectInfo({
 
       <p className="text-neutral-300">{description}</p>
 
-      <div className="mt-4 flex gap-3">
-        {demoLink && (
+      {isEnterprise && (
+        <p className="text-neutral-500 text-xs mt-2 italic">
+          *Este é um projeto empresarial; por motivos de confidencialidade, o
+          código-fonte e detalhes internos não podem ser divulgados. Apenas
+          demonstrações visuais públicas estão disponíveis.*
+        </p>
+      )}
+
+      <div className="mt-4 flex gap-4">
+        {isEnterprise && demoImages && demoImages.length > 0 && (
+          <button
+            onClick={() => console.log("Abrir galeria de prints", demoImages)}
+            className="text-purple-400 hover:text-purple-300 transition-colors"
+          >
+            Ver demonstração →
+          </button>
+        )}
+
+        {!isEnterprise && demoLink && (
           <a
             href={demoLink}
             target="_blank"
@@ -37,7 +59,7 @@ export default function ProjectInfo({
           </a>
         )}
 
-        {githubLink && (
+        {!isEnterprise && githubLink && (
           <a
             href={githubLink}
             target="_blank"
