@@ -30,8 +30,7 @@ export default function AccessPage() {
   }, [current]);
 
   const handleClickNavigateHomePage = () => {
-    navigate("/HomePage", { replace: true });
-    window.history.replaceState(null, "", "/About-Anderson");
+    navigate("/About-Anderson");
   };
 
   return (

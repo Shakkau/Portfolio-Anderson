@@ -9,15 +9,6 @@ export default function AboutMe() {
   const [activeTab, setActiveTab] = useState("projetos");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const handlePopState = () => {
-      navigate("/");
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, [navigate]);
-
   return (
     <div className="w-full min-h-screen bg-neutral-900 relative overflow-hidden py-12">
       <PurpleBackground />
