@@ -1,4 +1,10 @@
 import ProjectInfo from "../components/ProjectInfo";
+import AppImg1 from "../assets/AppScreenshot/AppImg1.jpg";
+import AppImg2 from "../assets/AppScreenshot/AppImg2.jpg";
+import AppImg3 from "../assets/AppScreenshot/AppImg3.jpg";
+import AppImg4 from "../assets/AppScreenshot/AppImg4.jpg";
+import AppImg5 from "../assets/AppScreenshot/AppImg5.jpg";
+import AppImg6 from "../assets/AppScreenshot/AppImg6.jpg";
 
 interface Project {
   id: string;
@@ -6,7 +12,7 @@ interface Project {
   techs: string[];
   description: string;
   demoLink?: string;
-  demoImages?: string[]; // ajustado (antes estava string)
+  demoImages?: string[];
   githubLink?: string;
   isEnterprise?: boolean;
 }
@@ -15,30 +21,38 @@ const projectsExample: Project[] = [
   {
     id: "smart-ipdx-app",
     title: "Smart IPDX – Aplicativo Mobile",
-    techs: ["React Native", "Tailwind", "AsyncStorage", "TypeScript"],
+    techs: ["React Native", "Tailwind", "AsyncStorage"],
     description:
-      "Aplicativo mobile Smart IPDX para comunicação direta com a api. Permite enviar comandos, gerenciar alarmes e visualizar eventos.",
+      "Aplicativo mobile Smart IPDX para envio de comandos, ativações de alarmes e visualização de histórico.",
     isEnterprise: true,
-    demoImages: [],
+    demoImages: [AppImg1, AppImg2, AppImg3, AppImg4, AppImg5, AppImg6],
   },
   {
     id: "smart-ipdx-backend",
     title: "Smart IPDX – Sistema Backend",
     techs: ["Java", "Spring Boot", "MySQL", "Spring Security"],
     description:
-      "Backend responsável por gerenciar comunicação do aplicativo Smart IPDX com os aparelhos da VisionCar, incluindo autenticação, confirmação de envios e segurança nas requisições.",
+      "Backend responsável por comunicar o app Smart IPDX com os dispositivos físicos e banco de dados, gerenciando permissões e segurança para requisições.",
     isEnterprise: true,
     demoImages: [],
   },
-
   {
-    id: "proj-1",
-    title: "Projeto 1",
-    techs: ["React", "TypeScript", "Tailwind CSS"],
+    id: "site-visioncar",
+    title: "VisionCar - Site",
+    techs: ["React", "Tailwind CSS", "Typescript"],
     description:
-      "Uma aplicação front-end para demonstrar layout, componentes reutilizáveis e integração com APIs.",
-    demoLink: "#",
-    githubLink: "#",
+      "Site principal da VisionCar, possuindo acesso a um backend e banco de dados, permitindo inserção de informações no site para demonstração de clientes.",
+    demoLink: "https://visioncar.ind.br",
+    isEnterprise: true,
+  },
+  {
+    id: "site-dxbrasil",
+    title: "DxBrasil - Site",
+    techs: ["React", "Tailwind CSS", "Typescript"],
+    description:
+      "Site principal da DxBrasil, possuindo acesso a um backend e banco de dados, permitindo inserção de informações no site para demonstração de clientes.",
+    demoLink: "https://dx-brasil.ind.br",
+    isEnterprise: true,
   },
 ];
 
@@ -55,15 +69,7 @@ export default function ProjectsView({
 
       <div className="space-y-6">
         {projects.map((p) => (
-          <ProjectInfo
-            key={p.id}
-            title={p.title}
-            techs={p.techs}
-            description={p.description}
-            demoLink={p.demoLink}
-            githubLink={!p.isEnterprise ? p.githubLink : undefined}
-            isEnterprise={p.isEnterprise}
-          />
+          <ProjectInfo key={p.id} {...p} />
         ))}
       </div>
     </div>

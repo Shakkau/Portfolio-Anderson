@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import DemoModal from "./DemoModal";
 
 export interface ProjectInfoProps {
   title: string;
@@ -19,7 +20,10 @@ export default function ProjectInfo({
   demoImages,
   isEnterprise = false,
 }: ProjectInfoProps) {
-  
+  const [openDemo, setOpenDemo] = useState(false);
+
+  const hasDemoImages = demoImages && demoImages.length > 0;
+
   return (
     <div className="bg-neutral-700/30 border border-neutral-600 rounded-xl p-6">
       <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
@@ -32,23 +36,23 @@ export default function ProjectInfo({
 
       {isEnterprise && (
         <p className="text-neutral-500 text-xs mt-2 italic">
-          *Este é um projeto empresarial; por motivos de confidencialidade, o
-          código-fonte e detalhes internos não podem ser divulgados. Apenas
-          demonstrações visuais públicas estão disponíveis.*
+          *Este é um projeto empresarial; por motivos de confidencialidade,
+          detalhes internos e código-fonte não podem ser divulgados. Apenas
+          recursos públicos podem ser exibidos.*
         </p>
       )}
 
       <div className="mt-4 flex gap-4">
-        {isEnterprise && demoImages && demoImages.length > 0 && (
+        {hasDemoImages && (
           <button
-            onClick={() => console.log("Abrir galeria de prints", demoImages)}
+            onClick={() => setOpenDemo(true)}
             className="text-purple-400 hover:text-purple-300 transition-colors"
           >
             Ver demonstração →
           </button>
         )}
 
-        {!isEnterprise && demoLink && (
+        {demoLink && (
           <a
             href={demoLink}
             target="_blank"
@@ -59,7 +63,7 @@ export default function ProjectInfo({
           </a>
         )}
 
-        {!isEnterprise && githubLink && (
+        {githubLink && (
           <a
             href={githubLink}
             target="_blank"
@@ -70,6 +74,10 @@ export default function ProjectInfo({
           </a>
         )}
       </div>
+
+      {openDemo && (
+        <DemoModal images={demoImages!} onClose={() => setOpenDemo(false)} />
+      )}
     </div>
   );
 }
