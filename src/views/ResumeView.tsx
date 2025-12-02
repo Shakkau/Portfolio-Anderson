@@ -20,13 +20,6 @@ export default function ResumeView() {
               color: #333;
               line-height: 1.6;
             }
-            h1 {
-              color: #7c3aed;
-              font-size: 28px;
-              margin-bottom: 10px;
-              border-bottom: 3px solid #7c3aed;
-              padding-bottom: 10px;
-            }
             h2 {
               color: #7c3aed;
               font-size: 20px;
@@ -109,22 +102,22 @@ export default function ResumeView() {
               Pato Branco, PR | 21 anos
             </div>
             <div class="contact-info">
-              📞 (46) 99984-8079 | ✉️ anderson_junior2@hotmail.com
+              Telefone: (46) 99984-8079 | Email: anderson_junior2@hotmail.com
             </div>
           </div>
 
           <div class="section">
-            <h2>🎯 Objetivo</h2>
+            <h2>Objetivo:</h2>
             <p>Desenvolvedor Jr.</p>
           </div>
 
           <div class="section">
-            <h2>📋 Qualificações</h2>
+            <h2>Qualificações:</h2>
             <p>Profissional com anos de experiência em tecnologia e programação, com pensamento analítico, capacidade de questionamento, pensamento criativo, abertura para inovações, resolução de problemas e trabalho em equipe.</p>
           </div>
 
           <div class="section">
-            <h2>💼 Experiência Profissional</h2>
+            <h2>Experiência Profissional:</h2>
             
             <div class="job-item">
               <h3><span class="job-title">Auxiliar de Desenvolvimento de Sistemas</span> - <span class="company">Visioncar</span></h3>
@@ -138,7 +131,7 @@ export default function ResumeView() {
           </div>
 
           <div class="section">
-            <h2>🚀 Projetos Desenvolvidos</h2>
+            <h2>Projetos Desenvolvidos:</h2>
             
             <div class="job-item">
               <h3><span class="job-title">Smart IPDX - Aplicativo Mobile</span></h3>
@@ -165,7 +158,7 @@ export default function ResumeView() {
           </div>
 
           <div class="section">
-            <h2>🛠️ Conhecimentos</h2>
+            <h2>Conhecimentos:</h2>
             <div class="skills">
               <span class="skill-tag">Github</span>
               <span class="skill-tag">Java</span>
@@ -184,7 +177,7 @@ export default function ResumeView() {
           </div>
 
           <div class="section">
-            <h2>🎓 Formação Acadêmica</h2>
+            <h2>Formação Acadêmica:</h2>
             <div class="job-item">
               <h3>Curso Técnico: Análise e Desenvolvimento de Sistemas</h3>
               <p class="period">SENAI - Agosto/2022 à Dezembro/2023</p>
@@ -192,7 +185,7 @@ export default function ResumeView() {
           </div>
 
           <div class="section">
-            <h2>🌐 Idiomas</h2>
+            <h2>Idiomas:</h2>
             <div class="languages">
               <div class="language-item">
                 <strong>Português:</strong> Nativo
@@ -231,7 +224,7 @@ export default function ResumeView() {
 
       <div className="text-neutral-300 space-y-2 mb-10">
         <h3 className="text-2xl font-bold text-white mb-2">
-          👤 Informações Pessoais
+          Informações Pessoais:
         </h3>
         <p>
           <strong>Nome:</strong> Anderson José da Luz Júnior
@@ -252,13 +245,13 @@ export default function ResumeView() {
 
       <div className="space-y-8 text-neutral-300">
         <div>
-          <h3 className="text-2xl font-bold text-white mb-4">🎯 Objetivo</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">Objetivo:</h3>
           <p>Desenvolvedor Jr.</p>
         </div>
 
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
-            📋 Qualificações
+            Qualificações:
           </h3>
           <p>
             Profissional com anos de experiência em tecnologia e
@@ -270,7 +263,7 @@ export default function ResumeView() {
 
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
-            💼 Experiência Profissional
+            Experiência Profissional:
           </h3>
           <div className="space-y-4">
             <div className="border-l-2 border-purple-500 pl-4">
@@ -297,7 +290,7 @@ export default function ResumeView() {
 
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
-            🚀 Projetos Desenvolvidos
+            Projetos Desenvolvidos:
           </h3>
 
           <div className="border-l-2 border-purple-500 pl-4 mb-6">
@@ -338,7 +331,7 @@ export default function ResumeView() {
 
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
-            🛠️ Conhecimentos
+            Conhecimentos:
           </h3>
           <div className="flex flex-wrap gap-2">
             {[
@@ -368,7 +361,7 @@ export default function ResumeView() {
 
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
-            🎓 Formação Acadêmica
+            Formação Acadêmica:
           </h3>
           <div className="border-l-2 border-purple-500 pl-4">
             <h4 className="text-lg font-semibold text-white">
@@ -382,7 +375,7 @@ export default function ResumeView() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold text-white mb-4">🌐 Idiomas</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">Idiomas:</h3>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-white">Português:</span>
