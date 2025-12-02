@@ -66,7 +66,7 @@ export default function AccessPage() {
 
         <div className="flex-1 flex items-center justify-center px-2 md:px-7 mt-6">
           <p className="text-neutral-300 text-base md:text-lg text-center leading-relaxed">
-            Meu portfólio online, que criei com o intuito de mostrar um pouco
+            Me chamo Anderson e este é portfólio online, que criei com o intuito de mostrar um pouco
             sobre mim. Aqui, irei contar um pouco sobre mim, citar alguns
             projetos nos quais já trabalhei e compartilhar um pouco da minha
             história — de como conheci a programação e por onde passei nesta

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PurpleBackground from "../components/PurpleBackground";
 import ProjectsView from "../views/ProjectsView";
 import AboutView from "../views/AboutView";
 import ResumeView from "../views/ResumeView";
+import ProfilePicture from "../assets/ProfilePicture/ProfilePicture.jpg";
 
 export default function AboutMe() {
   const [activeTab, setActiveTab] = useState("projetos");
@@ -39,13 +40,11 @@ export default function AboutMe() {
 
             <div className="flex justify-center mb-2">
               <div className="w-32 h-32 md:w-40 md:h-40 bg-neutral-700 rounded-full flex items-center justify-center overflow-hidden">
-                <svg
-                  className="w-20 h-20 md:w-24 md:h-24 text-neutral-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
+                <img
+                  src={ProfilePicture}
+                  alt="Foto de perfil"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
