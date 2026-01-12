@@ -8,7 +8,7 @@ export default function AboutView() {
       <div className="space-y-4 text-neutral-300">
         <p>
           Olá a você que está lendo este texto hoje! Sou desenvolvedor
-          profissionalmente há pouco mais de 1 ano e meio, mas estou na
+          profissionalmente há mais de 1 ano, mas estou na
           programação desde 2022. Minha jornada começou comigo
           explorando o inspecionar elemento das páginas, alterando HTML,
           mexendo no console e tentando entender como tudo funcionava — mesmo
@@ -24,7 +24,7 @@ export default function AboutView() {
         </p>
 
         <p>
-          Entrei no mercado como suporte técnico em um aplicativo de vendas,
+          Entrei no mercado de trabalho como suporte técnico em um aplicativo de vendas,
           onde aprendi muito sobre banco de dados, atendimento e trabalho em
           equipe. Depois de 8 meses, surgiu uma oportunidade na área que eu
           sempre quis: Desenvolvimento. Hoje atuo criando aplicações, sistemas e

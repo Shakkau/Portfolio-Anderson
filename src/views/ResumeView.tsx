@@ -179,6 +179,10 @@ export default function ResumeView() {
           <div class="section">
             <h2>Formação Acadêmica:</h2>
             <div class="job-item">
+              <h3>Curso Superior: Tecnico em Análise e Desenvolvimento de Sistemas</h3>
+              <p class="period">Uninter - Janeiro/2026 à Julho/2028</p>
+            </div>
+            <div class="job-item">
               <h3>Curso Técnico: Análise e Desenvolvimento de Sistemas</h3>
               <p class="period">SENAI - Agosto/2022 à Dezembro/2023</p>
             </div>
@@ -363,6 +367,15 @@ export default function ResumeView() {
           <h3 className="text-2xl font-bold text-white mb-4">
             Formação Acadêmica:
           </h3>
+          <div className="border-l-2 border-purple-500 pl-4">
+            <h4 className="text-lg font-semibold text-white">
+              Curso Superior: Tecnico em Análise e Desenvolvimento de Sistemas
+            </h4>
+            <p className="text-purple-400 font-medium">Uninter</p>
+            <p className="text-neutral-400 text-sm">
+              Janeiro/2026 à Julho/2028
+            </p>
+          </div>
           <div className="border-l-2 border-purple-500 pl-4">
             <h4 className="text-lg font-semibold text-white">
               Curso Técnico: Análise e Desenvolvimento de Sistemas
