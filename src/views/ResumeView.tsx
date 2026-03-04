@@ -120,7 +120,7 @@ export default function ResumeView() {
             <h2>Experiência Profissional:</h2>
             
             <div class="job-item">
-              <h3><span class="job-title">Auxiliar de Desenvolvimento de Sistemas</span> - <span class="company">Visioncar</span></h3>
+              <h3><span class="job-title">Desenvolvedor Júnior</span> - <span class="company">Visioncar</span></h3>
               <p class="period">Março/2024 - Atualmente</p>
             </div>
 
@@ -272,7 +272,7 @@ export default function ResumeView() {
           <div className="space-y-4">
             <div className="border-l-2 border-purple-500 pl-4">
               <h4 className="text-lg font-semibold text-white">
-                Auxiliar de Desenvolvimento de Sistemas
+                Desenvolvedor Júnior
               </h4>
               <p className="text-purple-400 font-medium">Visioncar</p>
               <p className="text-neutral-400 text-sm mb-2">
