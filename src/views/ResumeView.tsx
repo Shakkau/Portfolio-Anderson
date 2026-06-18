@@ -99,7 +99,7 @@ export default function ResumeView() {
           <div class="header">
             <h1>Anderson José da Luz Júnior</h1>
             <div class="contact-info">
-              Pato Branco, PR | 21 anos
+              Pato Branco, PR | 22 anos
             </div>
             <div class="contact-info">
               Telefone: (46) 99984-8079 | Email: anderson_junior2@hotmail.com
@@ -237,7 +237,7 @@ export default function ResumeView() {
           <strong>Cidade:</strong> Pato Branco, PR
         </p>
         <p>
-          <strong>Idade:</strong> 21 anos
+          <strong>Idade:</strong> 22 anos
         </p>
         <p>
           <strong>Telefone:</strong> (46) 99984-8079
