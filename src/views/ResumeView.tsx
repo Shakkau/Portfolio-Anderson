@@ -1,222 +1,283 @@
 import React from "react";
 import { Download } from "lucide-react";
 
+const resumeHtml = `
+  <div class="resume">
+    <header class="resume-header">
+      <h1>Anderson José da Luz Júnior</h1>
+      <p>
+        anderson_junior2@hotmail.com | +55 (46) 99984-8079 | Pato Branco, PR
+      </p>
+    </header>
+
+    <section>
+      <h2>Resumo</h2>
+      <p>
+        Desenvolvedor de Software com experiência no desenvolvimento de aplicações backend, frontend e sistemas web,
+        voltados para automação e monitoramento em tempo real. Atuo na construção, manutenção e evolução de plataformas
+        para o setor de segurança eletrônica, automação e rastreamento, desenvolvendo integrações com dispositivos IoT,
+        integrações entre sistemas, APIs REST e soluções para monitoramento de rebanhos bovinos. Trabalho com Java
+        (Spring Boot e Swing), React, React Native e MySQL, além da implementação de soluções utilizando protocolos como
+        UDP, TCP e MQTT para comunicação com dispositivos e equipamentos de campo. Também participo do desenvolvimento
+        e manutenção de aplicações web e sites institucionais, sempre buscando entregar soluções robustas, escaláveis
+        e de fácil utilização.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experiência</h2>
+
+      <div class="experience">
+        <div class="experience-head">
+          <div>
+            <h3>Desenvolvedor Júnior</h3>
+            <p><strong>Visioncar</strong> | Paraná, Brazil</p>
+          </div>
+          <span>03/2024 – Atualmente</span>
+        </div>
+
+        <p>
+          Atuação no desenvolvimento de sistemas voltados para segurança eletrônica, automação, rastreamento veicular
+          e monitoramento de rebanhos bovinos, participando da construção, evolução e manutenção de plataformas
+          utilizadas em tempo real por clientes e dispositivos IoT.
+        </p>
+
+        <ul>
+          <li>Desenvolvimento e manutenção de aplicações backend utilizando Java (Spring Boot) e MySQL, implementando APIs REST e integrações entre sistemas.</li>
+          <li>Participação na evolução e manutenção de aplicações legadas desenvolvidas em Java Swing, realizando correções, implementação de novas funcionalidades e melhorias de desempenho.</li>
+          <li>Desenvolvimento de aplicações web e mobile utilizando React e React Native, integradas a plataformas de monitoramento e automação.</li>
+          <li>Implementação de integrações com dispositivos IoT utilizando protocolos UDP, TCP e MQTT, garantindo comunicação confiável entre equipamentos e servidores.</li>
+          <li>Desenvolvimento de funcionalidades para sistemas de monitoramento de rebanhos bovinos e rastreamento veicular em tempo real, realizando processamento e visualização de dados provenientes de dispositivos de campo.</li>
+          <li>Desenvolvimento e manutenção dos sites institucionais da empresa, criando novas funcionalidades, integrações e melhorias na experiência dos usuários.</li>
+        </ul>
+
+        <p class="skills">
+          <strong>Skills:</strong> Java, Spring Boot, Java Swing, React, React Native, MySQL, REST APIs, UDP/TCP, MQTT, IoT, Git, Real-time Systems
+        </p>
+      </div>
+
+      <div class="experience">
+        <div class="experience-head">
+          <div>
+            <h3>Suporte Técnico</h3>
+            <p><strong>Eeco Sistemas</strong> | Paraná, Brazil</p>
+          </div>
+          <span>05/2023 – 02/2024</span>
+        </div>
+
+        <p>
+          Atuação no suporte técnico e implantação de sistemas, realizando atendimento direto aos clientes, investigação
+          de problemas, análise de banco de dados e apoio às integrações da plataforma com novos clientes.
+        </p>
+
+        <ul>
+          <li>Atendimento direto aos clientes para resolução de dúvidas, suporte operacional e identificação de falhas no sistema.</li>
+          <li>Investigação e validação de bugs reportados pelos usuários, reproduzindo cenários e encaminhando soluções junto à equipe de desenvolvimento.</li>
+          <li>Realização de ajustes e correções diretamente no banco de dados PostgreSQL para resolução de inconsistências operacionais e suporte às demandas dos clientes.</li>
+          <li>Participação na implantação e integração da plataforma para novos clientes, realizando configurações, validações e acompanhamento da entrada em produção.</li>
+          <li>Atuação como elo entre clientes e equipe de desenvolvimento, documentando problemas, validando correções e garantindo maior qualidade nas entregas.</li>
+        </ul>
+
+        <p class="skills">
+          <strong>Skills:</strong> PostgreSQL, SQL, Integração de Sistemas, Atendimento ao Cliente, Suporte Técnico, Troubleshooting
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Educação</h2>
+      <p><strong>Curso Superior em Análise e Desenvolvimento de Sistemas</strong> – Uninter (2026 – 2028)</p>
+      <p><strong>Curso Técnico em Análise e Desenvolvimento de Sistemas</strong> – SENAI (2022 – 2023)</p>
+    </section>
+
+    <section>
+      <h2>Idiomas</h2>
+      <p><strong>Português:</strong> Nativo</p>
+      <p><strong>Inglês:</strong> Intermediário</p>
+    </section>
+
+    <section>
+      <h2>Tecnologias | Habilidades</h2>
+      <p class="techs">
+        Java | Spring Boot | Spring Security | Java Swing | REST APIs | API Development | React | React Native |
+        TypeScript | JavaScript | HTML | CSS | Tailwind | MySQL | PostgreSQL | SQL | MQTT | TCP/UDP | IoT |
+        Real-time Systems | Git | GitHub | Docker | Microserviços | BFF | Desenvolvimento Backend
+      </p>
+    </section>
+  </div>
+`;
+
+const resumeCss = `
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.38;
+  }
+
+  .resume {
+    width: 794px;
+    min-height: 1123px;
+    margin: 0 auto;
+    padding: 38px 48px;
+    background: #ffffff;
+  }
+
+  .resume-header {
+    margin-bottom: 20px;
+  }
+
+  .resume-header h1 {
+    margin: 0 0 10px;
+    font-size: 25px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .resume-header p {
+    margin: 0;
+    font-size: 12px;
+    color: #111111;
+    text-align: left;
+  }
+
+  section {
+    margin-top: 20px;
+  }
+
+  h2 {
+    margin: 0 0 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #9ca3af;
+    font-size: 17px;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  p {
+    margin: 0 0 10px;
+    text-align: justify;
+  }
+
+  ul {
+    margin: 8px 0 12px 17px;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 7px;
+    text-align: justify;
+  }
+
+  .experience {
+    margin-bottom: 20px;
+  }
+
+  .experience-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 12px;
+  }
+
+  .experience-head p {
+    margin: 2px 0 0;
+    font-style: italic;
+    text-align: left;
+  }
+
+  .experience-head span {
+    white-space: nowrap;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 18px;
+  }
+
+  .skills {
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .techs {
+    text-align: left;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .resume {
+      width: auto;
+      min-height: auto;
+      margin: 0;
+      padding: 38px 48px;
+    }
+
+    section,
+    .experience {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+`;
+
 export default function ResumeView() {
   const handleDownloadPDF = () => {
     const printWindow = window.open("", "_blank");
 
-    const content = `
+    if (!printWindow) return;
+
+    printWindow.document.write(`
       <!DOCTYPE html>
-      <html>
+      <html lang="pt-BR">
         <head>
-          <meta charset="UTF-8">
+          <meta charset="UTF-8" />
           <title>Currículo - Anderson José da Luz Júnior</title>
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-              max-width: 800px;
-              margin: 40px auto;
-              padding: 20px;
-              color: #333;
-              line-height: 1.6;
-            }
-            h2 {
-              color: #7c3aed;
-              font-size: 20px;
-              margin-top: 30px;
-              margin-bottom: 15px;
-              border-left: 4px solid #7c3aed;
-              padding-left: 10px;
-            }
-            h3 {
-              color: #333;
-              font-size: 16px;
-              margin-bottom: 5px;
-            }
-            .header {
-              text-align: center;
-              margin-bottom: 30px;
-            }
-            .contact-info {
-              text-align: center;
-              color: #666;
-              font-size: 14px;
-              margin-bottom: 10px;
-            }
-            .section {
-              margin-bottom: 25px;
-            }
-            .job-item {
-              margin-bottom: 20px;
-              padding-left: 15px;
-              border-left: 3px solid #e5e7eb;
-            }
-            .job-title {
-              font-weight: bold;
-              color: #333;
-            }
-            .company {
-              color: #7c3aed;
-              font-weight: 600;
-            }
-            .period {
-              color: #666;
-              font-size: 14px;
-              font-style: italic;
-              margin-top: 3px;
-            }
-            .skills {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 8px;
-              margin-top: 10px;
-            }
-            .skill-tag {
-              background: #f3f4f6;
-              padding: 4px 12px;
-              border-radius: 4px;
-              font-size: 13px;
-              color: #374151;
-              border: 1px solid #e5e7eb;
-            }
-            .languages {
-              display: flex;
-              gap: 20px;
-              margin-top: 10px;
-            }
-            .language-item {
-              flex: 1;
-            }
-            @media print {
-              body {
-                margin: 0;
-                padding: 20px;
-              }
-            }
-          </style>
+          <style>${resumeCss}</style>
         </head>
         <body>
-          <div class="header">
-            <h1>Anderson José da Luz Júnior</h1>
-            <div class="contact-info">
-              Pato Branco, PR | 22 anos
-            </div>
-            <div class="contact-info">
-              Telefone: (46) 99984-8079 | Email: anderson_junior2@hotmail.com
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Objetivo:</h2>
-            <p>Desenvolvedor Jr.</p>
-          </div>
-
-          <div class="section">
-            <h2>Qualificações:</h2>
-            <p>Profissional com anos de experiência em tecnologia e programação, com pensamento analítico, capacidade de questionamento, pensamento criativo, abertura para inovações, resolução de problemas e trabalho em equipe.</p>
-          </div>
-
-          <div class="section">
-            <h2>Experiência Profissional:</h2>
-            
-            <div class="job-item">
-              <h3><span class="job-title">Desenvolvedor Júnior</span> - <span class="company">Visioncar</span></h3>
-              <p class="period">Março/2024 - Atualmente</p>
-            </div>
-
-            <div class="job-item">
-              <h3><span class="job-title">Suporte Técnico</span> - <span class="company">Eeco Sistemas</span></h3>
-              <p class="period">Maio/2023 - Fevereiro/2024</p>
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Projetos Desenvolvidos:</h2>
-            
-            <div class="job-item">
-              <h3><span class="job-title">Smart IPDX - Aplicativo Mobile</span></h3>
-              <p>Desenvolvi um aplicativo para a empresa Visioncar chamado Smart
-              IPDX. O app se conecta com as placas físicas da empresa,
-              permitindo enviar comandos de automação, ativar/desativar alarmes,
-              visualizar o histórico de disparos e receber notificações de
-              eventos críticos. Trabalhei na interface do app em React Native,
-              comunicação com a API e no tratamento de estados e erros para
-              garantir confiabilidade da aplicação.</p>
-              <p class="period">Tecnologias: React Native, Typescript, Tailwind, AsyncStorage.</p>
-            </div>
-
-            <div class="job-item">
-              <h3><span class="job-title">Smart IPDX - Sistema Backend</span></h3>
-              <p>Desenvolvi o backend que integra o aplicativo com as placas,
-              implementando endpoints para envio de comandos, persistência de
-              histórico e integração com outras aplicações corporativas.
-              Implementei autenticação, filas de processamento e rotinas de
-              reconciliação para garantir consistência entre dispositivos e
-              sistema.</p>
-              <p class="period">Tecnologias: Java, Spring Boot, MySQL, Spring Security.</p>
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Conhecimentos:</h2>
-            <div class="skills">
-              <span class="skill-tag">Github</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">Flutter</span>
-              <span class="skill-tag">Spring Boot</span>
-              <span class="skill-tag">Spring Security</span>
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">BFF (Backend For Frontend)</span>
-              <span class="skill-tag">Microserviços</span>
-              <span class="skill-tag">Desenvolvimento Backend</span>
-              <span class="skill-tag">React-native</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Tailwind</span>
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Formação Acadêmica:</h2>
-            <div class="job-item">
-              <h3>Curso Superior: Tecnico em Análise e Desenvolvimento de Sistemas</h3>
-              <p class="period">Uninter - Janeiro/2026 à Julho/2028</p>
-            </div>
-            <div class="job-item">
-              <h3>Curso Técnico: Análise e Desenvolvimento de Sistemas</h3>
-              <p class="period">SENAI - Agosto/2022 à Dezembro/2023</p>
-            </div>
-          </div>
-
-          <div class="section">
-            <h2>Idiomas:</h2>
-            <div class="languages">
-              <div class="language-item">
-                <strong>Português:</strong> Nativo
-              </div>
-              <div class="language-item">
-                <strong>Inglês:</strong> Intermediário
-              </div>
-            </div>
-          </div>
+          ${resumeHtml}
+          <script>
+            window.onload = function () {
+              setTimeout(function () {
+                window.print();
+              }, 300);
+            };
+          </script>
         </body>
       </html>
-    `;
+    `);
 
-    printWindow?.document.write(content);
-    printWindow?.document.close();
-
-    setTimeout(() => {
-      printWindow?.print();
-    }, 250);
+    printWindow.document.close();
   };
 
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-white flex items-center gap-3">
-          Meu Currículo
-        </h2>
+        <h2 className="text-3xl font-bold text-white">Meu Currículo</h2>
+
         <button
           onClick={handleDownloadPDF}
           className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
@@ -226,178 +287,212 @@ export default function ResumeView() {
         </button>
       </div>
 
-      <div className="text-neutral-300 space-y-2 mb-10">
-        <h3 className="text-2xl font-bold text-white mb-2">
-          Informações Pessoais:
-        </h3>
-        <p>
-          <strong>Nome:</strong> Anderson José da Luz Júnior
-        </p>
-        <p>
-          <strong>Cidade:</strong> Pato Branco, PR
-        </p>
-        <p>
-          <strong>Idade:</strong> 22 anos
-        </p>
-        <p>
-          <strong>Telefone:</strong> (46) 99984-8079
-        </p>
-        <p>
-          <strong>Email:</strong> anderson_junior2@hotmail.com
-        </p>
-      </div>
-
       <div className="space-y-8 text-neutral-300">
         <div>
-          <h3 className="text-2xl font-bold text-white mb-4">Objetivo:</h3>
-          <p>Desenvolvedor Jr.</p>
+          <h3 className="text-2xl font-bold text-white mb-2">
+            Anderson José da Luz Júnior
+          </h3>
+          <p>
+            Pato Branco, PR | +55 (46) 99984-8079 | anderson_junior2@hotmail.com
+          </p>
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Qualificações:
-          </h3>
+          <h3 className="text-2xl font-bold text-white mb-4">Resumo</h3>
           <p>
-            Profissional com anos de experiência em tecnologia e
-            programação, com pensamento analítico, capacidade de questionamento,
-            pensamento criativo, abertura para inovações, resolução de problemas
-            e trabalho em equipe.
+            Desenvolvedor de Software com experiência no desenvolvimento de
+            aplicações backend, frontend e sistemas web, voltados para automação
+            e monitoramento em tempo real. Atuo na construção, manutenção e
+            evolução de plataformas para o setor de segurança eletrônica,
+            automação e rastreamento, desenvolvendo integrações com dispositivos
+            IoT, integrações entre sistemas, APIs REST e soluções para
+            monitoramento de rebanhos bovinos. Trabalho com Java (Spring Boot e
+            Swing), React, React Native e MySQL, além da implementação de
+            soluções utilizando protocolos como UDP, TCP e MQTT para comunicação
+            com dispositivos e equipamentos de campo. Também participo do
+            desenvolvimento e manutenção de aplicações web e sites
+            institucionais, sempre buscando entregar soluções robustas,
+            escaláveis e de fácil utilização.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold text-white mb-4">Experiência</h3>
+
+          <div className="border-l-2 border-purple-500 pl-4 mb-6">
+            <div className="flex justify-between gap-4 flex-wrap">
+              <div>
+                <h4 className="text-lg font-semibold text-white">
+                  Desenvolvedor Júnior
+                </h4>
+                <p className="text-purple-400 font-medium">
+                  Visioncar | Paraná, Brazil
+                </p>
+              </div>
+              <p className="text-neutral-400 text-sm">03/2024 – Atualmente</p>
+            </div>
+
+            <p className="mt-3">
+              Atuação no desenvolvimento de sistemas voltados para segurança
+              eletrônica, automação, rastreamento veicular e monitoramento de
+              rebanhos bovinos, participando da construção, evolução e
+              manutenção de plataformas utilizadas em tempo real por clientes e
+              dispositivos IoT.
+            </p>
+
+            <ul className="list-disc pl-5 mt-3 space-y-2">
+              <li>
+                Desenvolvimento e manutenção de aplicações backend utilizando
+                Java (Spring Boot) e MySQL, implementando APIs REST e
+                integrações entre sistemas.
+              </li>
+              <li>
+                Participação na evolução e manutenção de aplicações legadas
+                desenvolvidas em Java Swing, realizando correções, implementação
+                de novas funcionalidades e melhorias de desempenho.
+              </li>
+              <li>
+                Desenvolvimento de aplicações web e mobile utilizando React e
+                React Native, integradas a plataformas de monitoramento e
+                automação.
+              </li>
+              <li>
+                Implementação de integrações com dispositivos IoT utilizando
+                protocolos UDP, TCP e MQTT, garantindo comunicação confiável
+                entre equipamentos e servidores.
+              </li>
+              <li>
+                Desenvolvimento de funcionalidades para sistemas de
+                monitoramento de rebanhos bovinos e rastreamento veicular em
+                tempo real, realizando processamento e visualização de dados
+                provenientes de dispositivos de campo.
+              </li>
+              <li>
+                Desenvolvimento e manutenção dos sites institucionais da
+                empresa, criando novas funcionalidades, integrações e melhorias
+                na experiência dos usuários.
+              </li>
+            </ul>
+
+            <p className="text-neutral-400 text-sm mt-3">
+              <strong>Skills:</strong> Java, Spring Boot, Java Swing, React,
+              React Native, MySQL, REST APIs, UDP/TCP, MQTT, IoT, Git, Real-time
+              Systems
+            </p>
+          </div>
+
+          <div className="border-l-2 border-purple-500 pl-4">
+            <div className="flex justify-between gap-4 flex-wrap">
+              <div>
+                <h4 className="text-lg font-semibold text-white">
+                  Suporte Técnico
+                </h4>
+                <p className="text-purple-400 font-medium">
+                  Eeco Sistemas | Paraná, Brazil
+                </p>
+              </div>
+              <p className="text-neutral-400 text-sm">05/2023 – 02/2024</p>
+            </div>
+
+            <p className="mt-3">
+              Atuação no suporte técnico e implantação de sistemas, realizando
+              atendimento direto aos clientes, investigação de problemas,
+              análise de banco de dados e apoio às integrações da plataforma com
+              novos clientes.
+            </p>
+
+            <ul className="list-disc pl-5 mt-3 space-y-2">
+              <li>
+                Atendimento direto aos clientes para resolução de dúvidas,
+                suporte operacional e identificação de falhas no sistema.
+              </li>
+              <li>
+                Investigação e validação de bugs reportados pelos usuários,
+                reproduzindo cenários e encaminhando soluções junto à equipe de
+                desenvolvimento.
+              </li>
+              <li>
+                Realização de ajustes e correções diretamente no banco de dados
+                PostgreSQL para resolução de inconsistências operacionais e
+                suporte às demandas dos clientes.
+              </li>
+              <li>
+                Participação na implantação e integração da plataforma para
+                novos clientes, realizando configurações, validações e
+                acompanhamento da entrada em produção.
+              </li>
+              <li>
+                Atuação como elo entre clientes e equipe de desenvolvimento,
+                documentando problemas, validando correções e garantindo maior
+                qualidade nas entregas.
+              </li>
+            </ul>
+
+            <p className="text-neutral-400 text-sm mt-3">
+              <strong>Skills:</strong> PostgreSQL, SQL, Integração de Sistemas,
+              Atendimento ao Cliente, Suporte Técnico, Troubleshooting
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold text-white mb-4">Educação</h3>
+
+          <div className="border-l-2 border-purple-500 pl-4 mb-4">
+            <h4 className="text-lg font-semibold text-white">
+              Curso Superior em Análise e Desenvolvimento de Sistemas
+            </h4>
+            <p className="text-purple-400 font-medium">Uninter</p>
+            <p className="text-neutral-400 text-sm">2026 – 2028</p>
+          </div>
+
+          <div className="border-l-2 border-purple-500 pl-4">
+            <h4 className="text-lg font-semibold text-white">
+              Curso Técnico em Análise e Desenvolvimento de Sistemas
+            </h4>
+            <p className="text-purple-400 font-medium">SENAI</p>
+            <p className="text-neutral-400 text-sm">2022 – 2023</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold text-white mb-4">Idiomas</h3>
+          <p>
+            <strong className="text-white">Português:</strong> Nativo
+          </p>
+          <p>
+            <strong className="text-white">Inglês:</strong> Intermediário
           </p>
         </div>
 
         <div>
           <h3 className="text-2xl font-bold text-white mb-4">
-            Experiência Profissional:
-          </h3>
-          <div className="space-y-4">
-            <div className="border-l-2 border-purple-500 pl-4">
-              <h4 className="text-lg font-semibold text-white">
-                Desenvolvedor Júnior
-              </h4>
-              <p className="text-purple-400 font-medium">Visioncar</p>
-              <p className="text-neutral-400 text-sm mb-2">
-                Março/2024 - Atualmente
-              </p>
-            </div>
-
-            <div className="border-l-2 border-purple-500 pl-4">
-              <h4 className="text-lg font-semibold text-white">
-                Suporte Técnico
-              </h4>
-              <p className="text-purple-400 font-medium">Eeco Sistemas</p>
-              <p className="text-neutral-400 text-sm mb-2">
-                Maio/2023 - Fevereiro/2024
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Projetos Desenvolvidos:
+            Tecnologias | Habilidades
           </h3>
 
-          <div className="border-l-2 border-purple-500 pl-4 mb-6">
-            <h4 className="text-lg font-semibold text-white">
-              Smart IPDX - Aplicativo Mobile
-            </h4>
-            <p className="text-neutral-300">
-              Desenvolvi um aplicativo para a empresa Visioncar chamado Smart
-              IPDX. O app se conecta com as placas físicas da empresa,
-              permitindo enviar comandos de automação, ativar/desativar alarmes,
-              visualizar o histórico de disparos e receber notificações de
-              eventos críticos. Trabalhei na interface do app em React Native,
-              comunicação com a API e no tratamento de estados e erros para
-              garantir confiabilidade da aplicação.
-            </p>
-            <p className="text-neutral-400 text-sm">
-              Tecnologias: React Native, Tailwind, AsyncStorage, Typescript.
-            </p>
-          </div>
-
-          <div className="border-l-2 border-purple-500 pl-4">
-            <h4 className="text-lg font-semibold text-white">
-              Smart IPDX - Sistema Backend
-            </h4>
-            <p className="text-neutral-300">
-              Desenvolvi o backend que integra o aplicativo com as placas,
-              implementando endpoints para envio de comandos, persistência de
-              histórico e integração com outras aplicações corporativas.
-              Implementei autenticação, filas de processamento e rotinas de
-              reconciliação para garantir consistência entre dispositivos e
-              sistema.
-            </p>
-            <p className="text-neutral-400 text-sm">
-              Tecnologias: Java, Spring Boot, MySQL, Spring Security.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Conhecimentos:
-          </h3>
           <div className="flex flex-wrap gap-2">
             {[
-              "GitHub",
               "Java",
-              "Flutter",
               "Spring Boot",
               "Spring Security",
-              "PostgreSQL",
-              "MySQL",
-              "BFF (Backend For Frontend)",
-              "Microserviços",
-              "Desenvolvimento Backend",
-              "React-Native",
               "React",
-              "Tailwind",
-            ].map((skill, index) => (
+              "React Native",
+              "MySQL",
+              "PostgreSQL",
+              "REST APIs",
+              "UDP/TCP",
+              "MQTT",
+              "IoT",
+              "Git",
+              "Docker",
+            ].map((skill) => (
               <span
-                key={index}
+                key={skill}
                 className="px-3 py-1 bg-neutral-700/50 border border-neutral-600 rounded-lg text-sm"
               >
                 {skill}
               </span>
             ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Formação Acadêmica:
-          </h3>
-          <div className="border-l-2 border-purple-500 pl-4">
-            <h4 className="text-lg font-semibold text-white">
-              Curso Superior: Tecnico em Análise e Desenvolvimento de Sistemas
-            </h4>
-            <p className="text-purple-400 font-medium">Uninter</p>
-            <p className="text-neutral-400 text-sm">
-              Janeiro/2026 à Julho/2028
-            </p>
-          </div>
-          <div className="border-l-2 border-purple-500 pl-4">
-            <h4 className="text-lg font-semibold text-white">
-              Curso Técnico: Análise e Desenvolvimento de Sistemas
-            </h4>
-            <p className="text-purple-400 font-medium">SENAI</p>
-            <p className="text-neutral-400 text-sm">
-              Agosto/2022 à Dezembro/2023
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-4">Idiomas:</h3>
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">Português:</span>
-              <span>Nativo</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-white">Inglês:</span>
-              <span>Intermediário</span>
-            </div>
           </div>
         </div>
       </div>
